@@ -1,0 +1,107 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.header{
+    width: 100%;
+    float: left;
+    position: relative;
+}
+.color-picker-button{
+  background-image: url(../assets/IconColorPicker.svg);
+  width: 48px;
+  height: 48px;
+  position: relative;
+  float: left;
+  padding: 0;
+  border: 0;
+  background-repeat: no-repeat;
+  background-position: center center;
+  border-radius: 50%;
+  margin: 10px;
+  background-color: lightgray;
+}
+.color-picker-button:hover{
+    background-color: darkgray;
+}
+.color-picker-button:active{
+    background-color: gray;
+}
+/*Use this extra div to avoid bug, when hovering low, the page adds a vertical scroll to the body, due to the dropper circle container overflowing the canvas, which looks awful */
+.canvas-wrapper{
+    position: relative;
+    float: left;
+    overflow: hidden;
+    max-width: 100%;
+}
+.canvas{
+    position: relative;
+    display: block;
+    width: 100%;
+    max-height: calc(100vh - 68px);
+    z-index: 1;
+    margin: 0 auto;
+    float: left;
+}
+.dropper-cricle-container{
+    image-rendering: pixelated;
+    position: absolute;
+    pointer-events: none;
+    border-radius: 50%;
+    border: 0;
+    width: 160px;
+    height: 160px;
+    transform: translate(-50%, -50%);
+    background-size: 320px 320px;
+    background-repeat: no-repeat;
+    border: 4px solid rgba(255, 255, 255, .8);
+    z-index: 2;
+    /* opacity: .5; */
+}
+.dropper-circle-border{
+    z-index: 3;
+    position: relative;
+}
+.dropper-cricle-container .grid:before{
+    content: '';
+    background-size: 10px 10px;
+    background-image: linear-gradient(to right, black 1px, transparent 1px), linear-gradient(to bottom, black 1px, transparent 1px);
+    width: 140px;
+    height: 140px;
+    position: absolute;
+    border-radius: 50%;
+    left: 5px;
+    z-index: 1;
+    top: 5px;
+}
+.dropper-cricle-container .grid:after{
+    content: '';
+    border: 1px solid gray;
+    outline: 1px solid white;
+    box-shadow: 0 0 5px white;
+    width: 11px;
+    height: 11px;
+    position: absolute;
+    left: 74px;
+    z-index: 2;
+    top: 74px;
+}
+.dropper-cricle-container:after{
+    content: attr(data-color);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 11;
+    background: gray;
+    padding: 4px;
+    border-radius: 3px;
+    margin-top: 21px;
+    color: #fff;
+}
+.data-container{
+    display: flex;
+    padding-top: 24px;
+    justify-content: center;
+}
