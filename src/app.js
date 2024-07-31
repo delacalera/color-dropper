@@ -147,6 +147,7 @@ the circle doesn't move as fast as the mouse.
 Also, if we wanted to work with bigger images, we may find browser limitations and then find orselves forced to split the main image in different canvases.
 Given that case, we wouldn't be able to work with a rect inside just one canvas.
 Therefore, I've choosen to apply this little CSS hack, as we really do not need any data from the amplified image as we are getting it from the original canvas.
+JS test can be found in index.js
  * @param x Number, X Coordinate where the mouse is place to obtain the color from
  * @param y Number, Y Coordinate where the mouse is place to obtain the color from
  */
