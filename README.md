@@ -2,6 +2,8 @@
 
 Run npm i to install dependencies
 
+Run npm run build to compile TS files into JS
+
 Run npm start to start the localhost
 
 If browser doesn't open automatically, open the browser and go to localhost:8080
@@ -12,4 +14,4 @@ Run npm test to see test results
 
 ## Considerations
 
-The file could be tested by adding a file input field, loading the file into that field dynamically and converting to base64 to avoid CORS issues with canvas. But I believe that it was out of the scope of the task, so I've opted by just opening a localhost. If you want to see it working just let me know.
+Another POC avoiding the use of a server can be found on sample/index-from-input.html, were user interaction is required. This is due to server not running and security issues with tainted canvases.
