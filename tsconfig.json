@@ -1,0 +1,7 @@
+{
+    "compilerOptions": {},
+    "files": [
+      "src/app-from-input",
+      "src/app.ts"
+    ]
+  }

@@ -4,7 +4,8 @@
   "description": "A simple color dropper",
   "main": "index.js",
   "scripts": {
-    "start": "http-server ./sample -p 8080 -o",
+    "start": "http-server -p 8080 -o",
+    "build": "tsc",
     "test": "jest"
   },
   "jest": {

@@ -1,5 +1,6 @@
 src/app-alt.js
 src/app-alt.ts
 src/test-original.js
+src/*.js
 sample/index2.html
 node_modules
